@@ -2,9 +2,9 @@
 
 #### 第一节 测试action方法  
  1、  
-  @RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(classes = MockServletContext.class)
-@WebAppConfiguration
+  @RunWith(SpringJUnit4ClassRunner.class)  
+@SpringApplicationConfiguration(classes = MockServletContext.class)  
+@WebAppConfiguration  
 public class Chapter1ApplicationTests {
 
 	private MockMvc mvc;
@@ -39,20 +39,20 @@ public class HelloController {
 	
 在Spring Boot 2.0中对事件模型做了一些增强，主要就是增加了ApplicationStartedEvent事件，所以在2.0版本中所有的事件按执行的先后顺序如下：
 
-ApplicationStartingEvent
-ApplicationEnvironmentPreparedEvent
-ApplicationPreparedEvent
-ApplicationStartedEvent <= 新增的事件
-ApplicationReadyEvent
-ApplicationFailedEvent
-从上面的列表中，我们可以看到ApplicationStartedEvent位于ApplicationPreparedEvent之后，ApplicationReadyEvent之前。
+ApplicationStartingEvent  
+ApplicationEnvironmentPreparedEvent  
+ApplicationPreparedEvent  
+ApplicationStartedEvent <= 新增的事件  
+ApplicationReadyEvent  
+ApplicationFailedEvent 
+从上面的列表中，我们可以看到ApplicationStartedEvent位于ApplicationPreparedEvent之后，ApplicationReadyEvent之前。  
 
 
 #### 第三节  自定义属性值与加载 和激活配置文件   
 
-com.didispace.blog.name=程序猿DD
-com.didispace.blog.title=Spring Boot教程
-com.didispace.blog.desc=${com.didispace.blog.name}正在努力写《${com.didispace.blog.title}》
+com.didispace.blog.name=程序猿DD  
+com.didispace.blog.title=Spring Boot教程  
+com.didispace.blog.desc=${com.didispace.blog.name}正在努力写《${com.didispace.blog.title}》 
 
 # 随机字符串
 com.didispace.blog.value=${random.value}
